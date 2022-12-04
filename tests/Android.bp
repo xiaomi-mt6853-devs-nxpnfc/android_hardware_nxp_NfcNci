@@ -17,7 +17,7 @@ package {
 }
 
 android_test {
-    name: "NfcTests",
+    name: "NQNfcTests",
     libs: [
         "android.test.runner",
         "android.test.base",
@@ -29,5 +29,5 @@ android_test {
     srcs: ["src/**/*.java"],
     platform_apis: true,
     certificate: "platform",
-    instrumentation_for: "NfcNci",
+    instrumentation_for: "NQNfcNci",
 }

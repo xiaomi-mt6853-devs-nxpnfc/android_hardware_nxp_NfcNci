@@ -3,7 +3,8 @@ package {
 }
 
 cc_library_shared {
-    name: "libnfc_nci_jni",
+    name: "libnqnfc_nci_jni",
+    system_ext_specific: true,
 
     cflags: [
         "-Wall",
@@ -26,12 +27,12 @@ cc_library_shared {
     srcs: ["**/*.cpp"],
 
     include_dirs: [
-        "system/nfc/src/nfa/include",
-        "system/nfc/src/nfc/include",
-        "system/nfc/src/include",
-        "system/nfc/src/gki/ulinux",
-        "system/nfc/src/gki/common",
-        "system/nfc/utils/include",
+        "hardware/nxp/libnfc-nci/src/nfa/include",
+        "hardware/nxp/libnfc-nci/src/nfc/include",
+        "hardware/nxp/libnfc-nci/src/include",
+        "hardware/nxp/libnfc-nci/src/gki/ulinux",
+        "hardware/nxp/libnfc-nci/src/gki/common",
+        "hardware/nxp/libnfc-nci/utils/include",
     ],
 
     local_include_dirs: [
@@ -47,7 +48,7 @@ cc_library_shared {
         "libcutils",
         "libutils",
         "liblog",
-        "libnfc-nci",
+        "libnqnfc-nci",
         "libchrome",
         "libbase",
         "android.hardware.nfc@1.0",

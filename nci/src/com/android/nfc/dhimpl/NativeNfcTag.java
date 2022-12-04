@@ -738,8 +738,6 @@ public class NativeNfcTag implements TagEndpoint {
                     case TagTechnology.ISO_DEP: {
                         if (hasTech(TagTechnology.NFC_A)) {
                             extras.putByteArray(IsoDep.EXTRA_HIST_BYTES, mTechActBytes[i]);
-                        } else if (hasTech(TagTechnology.NFC_Q)) {
-                            extras.putByteArray(IsoDep.EXTRA_HIST_BYTES, mTechActBytes[i]);
                         }
                         else {
                             extras.putByteArray(IsoDep.EXTRA_HI_LAYER_RESP, mTechActBytes[i]);
